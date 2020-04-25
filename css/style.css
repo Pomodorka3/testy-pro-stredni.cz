@@ -1,0 +1,178 @@
+*{
+	font-family: 'Signika', sans-serif;
+}
+.navbar a{
+	font-family: 'Oswald', sans-serif;
+}
+.codeSecurity{
+	color: white;
+	transition: color 0.3s;
+}
+.codeSecurity:hover{
+	color: black;
+}
+
+#shop-link:hover:after{
+	content: 'a';
+	color: yellow;
+}
+/*------ signin.php -------*/
+#signin-window{
+	width: 500px;
+}
+@media screen and (max-width: 556px) {
+	#signin-window{
+		width: 100%;
+	}
+}
+/*------ signup.php -------*/
+#signup-window{
+	width: 500px;
+}
+@media screen and (max-width: 556px) {
+	#signup-window{
+		width: 100%;
+	}
+}
+/*------ forgotten_password.php -------*/
+#forgottenPassword-window{
+	width: 500px;
+}
+@media screen and (max-width: 556px) {
+	#forgottenPassword-window{
+		width: 100%;
+	}
+}
+/*------ reset_password.php -------*/
+#resetPassword-window{
+	width: 500px;
+}
+@media screen and (max-width: 556px) {
+	#resetPassword-window{
+		width: 100%;
+	}
+}
+/*------ item_add.php -------*/
+#itemAdd-window{
+	width: 500px;
+}
+@media screen and (max-width: 556px) {
+	#itemAdd-window{
+		width: 100%;
+	}
+}
+/*------ ticket_show.php -------*/
+#new_comment{
+	width: 450px;
+}
+@media screen and (max-width: 556px) {
+	#new_comment{
+		width: 100%;
+	}
+}
+/*------ first_setup.php -------*/
+#first-setup{
+	width: 450px;
+}
+@media screen and (max-width: 556px) {
+	#first-setup{
+		width: 100%;
+	}
+}
+/*------ profile_settings.php -------*/
+#profile_settings{
+	height: 700px;
+	width: 700px;
+}
+@media screen and (max-width: 930px) {
+	#profile_settings{
+		height: 840px;
+		width: 700px;
+	}
+}
+@media screen and (max-width: 767px) {
+	#profile_settings{
+		height: 840px;
+		width: 700px;
+	}
+}
+@media screen and (max-width: 338px) {
+	#profile_settings{
+		height: 890px;
+		width: 700px;
+	}
+}
+/*------ log.php -------*/
+#log-container{
+	height: 750px;
+	width: 900px;
+}
+@media screen and (max-width: 767px) {
+	#log-container{
+		height: 1000px;
+		width: 700px;
+	}
+}
+@media screen and (max-width: 450px) {
+	#log-container{
+		height: 1100px;
+		width: 350px;
+	}
+}
+@media screen and (max-width: 397px) {
+	#log-container{
+		height: 1100px;
+		width: 300px;
+	}
+}
+@media screen and (max-width: 320px) {
+	#log-container{
+		height: 1100px;
+		width: 250px;
+	}
+}
+/*----------- profile.php -----------*/
+/* .notifications{
+	height: 200px;
+}
+
+@media screen and (max-width: 930px), (max-heigh: 100px){
+	.notifications{
+		height: 100%;
+	}
+} */
+.profile-page-lightgrey{
+	color: #999999;
+}
+/*-----------------------------------*/
+.notification {
+	color: white;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	border-radius: 2px;
+  }
+.notification .badge {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	padding: 3px 6px;
+	border-radius: 50%;
+	background: red;
+	color: white;
+}
+.tooltip { pointer-events: none; }
+
+/*----------- Footer -----------*/
+@media screen and (max-width: 930px), (max-height: 760px){
+	.fixed-bottom{
+		position: relative;
+	}
+}
+/*-----------------------------------*/
+
+/*----------- cookies.html -----------*/
+.cookies>h2, .cookies>h4, .cookies>p, .cookies>u{
+	font-family: 'Roboto', sans-serif;
+}
+/*-----------------------------------*/

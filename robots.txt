@@ -1,0 +1,17 @@
+User-agent: Googlebot
+Disallow: /signup.php
+Disallow: /signin.php
+Disallow: /forgotten_password.php
+Disallow: /shop.php
+Disallow: /paymentconfirm.php
+Disallow: /paymentsuccess.php
+Disallow: /paymentfail.php
+Disallow: /signup
+Disallow: /signin
+Disallow: /forgotten_password
+Disallow: /shop
+Disallow: /paymentconfirm
+Disallow: /paymentsuccess
+Disallow: /paymentfail
+
+Sitemap: https://testy-pro-stredni.cz/sitemap.xml

@@ -1,0 +1,69 @@
+/* @author Tim himself */
+
+.accordion h6 {
+	//background: #272e35;
+	//color: #fff;
+	border: 1px solid linear-gradient(120deg,#fdfbfb 0,#ebedee 100%);
+	text-align: left;
+	border-radius: 4px;
+	padding: 10px 12px;
+	cursor: pointer;
+	margin-top: 0;
+	margin-bottom: 9px;
+	padding-right: 40px;
+	transition: 0.25s all;
+	position: relative;
+	font-family: 'Baloo', cursive;
+}
+.accordion h6.active {
+	margin-bottom: 21px;
+	background: linear-gradient(to top,#30cfd0 0,#330867 100%);
+	color: #fff;
+}
+.accordion h6::before {
+	content: attr(data-prefix);
+	font-size: 18px;
+	margin-right: 9px;
+}
+.accordion h6.alignLeft {
+	padding-left: 35px;
+}
+.accordion > div {
+	display: none;
+	background: linear-gradient(120deg,#fdfbfb 0,#ebedee 100%);
+	border-radius: 4px;
+	border: 1px solid #cdcdcd;
+	text-align: left;
+	padding: 31px 33px;
+	margin-bottom: 9px;
+}
+.accordion .arrowDown {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 13.0px 7.5px 0 7.5px;
+	border-color: #272e35 transparent transparent transparent;
+	position: absolute;
+	bottom: 0;
+	left: 40px;
+	transition: 0.25s all;
+	opacity: 0;
+}
+.accordion .active .arrowDown {
+	bottom: -13px;
+	border-color: #009641 transparent transparent transparent;
+	opacity: 1;
+}
+.accordion .collapseIcon {
+	position: absolute;
+	right: 20px;
+	top: 45%;
+	font-size: 25px;
+	font-weight: 300;
+	-ms-transform: translate(0, -50%);
+	    transform: translate(0, -50%);
+}
+.accordion .collapseIcon.alignLeft {
+	right: initial;
+	left: 20px;
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{$page_title}</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- Accordion plugin -->
+  <link href="js/plug_accordion/accordion.css" rel="stylesheet">
+  <link href="js/Croppie/croppie.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/r-2.2.2/datatables.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Signika|Jura|Baloo&display=swap" rel="stylesheet">
+  <body>
+
+<header>
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark unique-color-dark lighten-1">
+    <a href="signin.php" class="navbar-brand"><img src='../testshop/img/logo-large.png' style='width: 30px;'></img></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarControl" aria-controls="navbarControl" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarControl">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item mx-2"><a href="signin.php" class="nav-link">Home</a></li>
+        <li class="nav-item mx-2"><a href="shop.php" class="nav-link" id="shop-link">Shop</a></li>
+        <li class="nav-item mx-2"><a href="#" class="nav-link">Deposit</a></li>
+        <li class="nav-item mx-2"><a href="withdraw.php" class="nav-link">Withdraw</a></li>
+        <li class="nav-item mx-2"><a href="referrals.php" class="nav-link">Referrals</a></li>
+        <li class="nav-item mx-2"><a href="item_add.php" class="nav-link">Add item</a></li>
+        <li class='nav-item mx-2'><a href='admins_supports_status.php' class='nav-link'>Adm & Supports</a></li>
+        <li class='nav-item mx-2'><a href='faq.php' class='nav-link'>FAQ</a></li>
+		<li class='nav-item mx-2'><a href='tickets.php' class='nav-link'>Tickets</a></li>
+		<!-- ---------------------------- -->
+		</ul>
+		<ul class="navbar-nav ml-auto nav-flex-icons">
+		<li class="nav-item">
+			<a href="#" class="nav-link waves-effect waves-light">
+			</a>
+		</li>
+		<li class="nav-item avatar dropdown">
+			<a href="#" class="nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			</a>
+			<div class="dropdown-menu dropdown-menu-right dropdown-secondary" aria-labelledby="profileDropdown">
+			<a href="profile.php" class="dropdown-item">Profile</a>
+			<a href="bought_items.php" class="dropdown-item">Bought items</a>
+			<a href="selling_items.php" class="dropdown-item">Selling items</a>
+			<a href="#" class="deposit">Deposit</a>
+			<a href="profile_settings.php" class="dropdown-item">Settings</a>
+			<a href="signout.php" class="dropdown-item">Sign out</a>
+			</div>
+		</li>
+		<li class="nav-item"><a href="signout.php" class="nav-link" data-toggle="tooltip" title="Sign out"><i class="fas fa-sign-out-alt"></i></a></li>
+		</ul>
+          <!--<li class='nav-item'><a href='item_check.php' class='nav-link'>Check item(Vldtrs)</a></li>
+          <li class='nav-item d-none d-lg-block'><span class='nav-link'>|</span></li>
+          <li class='nav-item'><a href='validators_requests.php' class='nav-link'>Vldtrs request</a></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Check</a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-secondary" aria-labelledby="profileDropdown">
+              <a href='item_check.php' class='dropdown-item'>Check items (school)</a>
+              <a href='item_check_all.php' class='dropdown-item'>Check items (all)</a>
+            </div>
+          </li>
+          <li class='nav-item'><a data-toggle='modal' data-target='#centralModalSm' class='nav-link'>Send message</a></li>
+          <div class='modal fade' id='centralModalSm' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+            <div class='modal-dialog modal-center' role='document'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h4 class='modal-title w-100' id='myModalLabel'>Send message</h4>
+                  <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                    <span aria-hidden='true'>&times;</span>
+                  </button>
+                </div>
+                <div class='modal-body'>
+                  <form action='message_send.php' class='text-center' method='post'>
+                    <input list="users" id="username_message_to" name="username" class="form-control mb-4" placeholder="Username" required autocomplete="off">
+                      <datalist id="users">
+                      </datalist>
+                    <textarea name='message_send_content' id='message_send_content' rows='6' class='form-control rounded' maxlength='400' autocomplete='off' required placeholder='Type your message:'></textarea>
+                    <button type='submit' class='btn btn-success btn-sm d-flex mx-auto mt-3'>Send</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Schools
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-secondary" aria-labelledby="profileDropdown">
+              <a href='school_add.php' class='dropdown-item'>School add requests</a>
+              <a href='school_check.php' class='dropdown-item'>School change requests</a>
+            </div>
+          </li>
+          <li class='nav-item btn-danger' style='border-radius:25px;'><a href='report_view.php' class='nav-link'>Reports</a></li>
+          <li class='nav-item btn-outline-success' style='border-radius:25px;'><a href='withdraw_requests.php' class='nav-link'>Withdraws</a></li>
+          <li class='nav-item'><a href='schools.php' class='nav-link'>Schools</a></li>
+		  <li class='nav-item'><a href='codes.php' class='nav-link'>Codes</a></li>"
+		  -->
+        <!--<ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item">
+            <a href="signup.php" class="nav-link waves-effect waves-light">
+              Sign up
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="signin.php" class="nav-link waves-effect waves-light">
+              Sign in
+            </a>
+          </li>
+        </ul>-->
+    </div>
+  </nav>
+</header>
+<div class="row my-5 mx-1">
+	<div class="col-md-3">
+	<div class='modal fade' id='change_image' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+				<div class='modal-dialog modal-center' role='document'>
+					<div class='modal-content'>
+						<div class='modal-header'>
+						<h4 class='modal-title w-100' id='myModalLabel'>Change image</h4>
+						<button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+							<span aria-hidden='true'>&times;</span>
+						</button>
+						</div>
+						<div class='modal-body'>
+							<label for="edit_profile_image">Choose new profile image</label><br>
+							<input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+							<input type="file" class="mb-4" name="edit_profile_image" accept=".jpeg, .jpg, .png" id="new_profile_image">
+							<div id="image_crop" style="display: none;">
+								<div class="row">
+									<div class="col-md-12 text-center">
+										<div id="image_demo"></div>
+									</div>
+									<div class="col-md-4" style="padding-top:30px;"></div>
+									<button type="button" id="rotateLeft" data-rotate="-90">Left</button>
+									<button type="button" id="rotateRight" data-rotate="90">Right</button>
+								</div>
+								<div class="modal-footer d-flex">
+									<button class="btn btn-success btn-sm crop_image mx-auto">Crop & Upload Image</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="card rounded p-3 text-center cloudy-knoxville-gradient">
+			<img id="profile_image" src="profile_pictures/default/default.png" class="img-fluid mx-auto my-3 z-depth-1 rounded">
+			<p style="font-family: 'Jura', sans-serif; font-size: 22px;" class="font-weight-bold">Admin Adminovich</p>
+			<div class="row">
+				<div class="col-6">
+					<p>Username: Pomodorka3</p>
+					<p>Balance: 111 Kc</p>
+					<p>School: Gym Prazacka</p>
+				</div>
+				<div class="col-6 my-auto">
+						<a href='https://www.instagram.com/".$instagram."'><img src='img/instagram.png' class='img-fluid mb-1 mx-2' style="width: 20px;">Instagram</a><br>
+						<a href='https://www.facebook.com/".$facebook."'><img src='img/facebook.png' class='img-fluid mb-1 mx-2' style="width: 20px;">Facebook</a><br>
+						<a href='https://www.instagram.com/".$snapchat."'><img src='img/snapchat.png' class='img-fluid mb-1 mx-2' style="width: 20px;">VKontakte</a>
+				</div>
+			</div>
+			<p>Last login: 11.11.1111</p>
+			<p>Confirmed items: 123</p>
+			<a href="#" id="change_picture" data-toggle='modal' data-target='#change_image'><i class="fas fa-pencil-alt"></i> Change profile picture</a>
+			<a href="profile_settings.php"><i class="fas fa-cog"></i> Settings</a>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<h4 class="text-center font-weight-bold mt-4" style="font-family: 'Baloo', cursive;">Notifications</h4>
+		<div id="notifications">
+			
+		</div>
+	</div>
+</div>
+
+</body>
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.js"></script>
+  <!-- Custom JavaScript -->
+  <script type="text/javascript" src="js/custom-script.js"></script>
+  <script type="text/javascript" src="js/ajax-profile-design.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+  <script type="text/javascript" src="js/Croppie/croppie.js"></script>
+  <script>  
+$(document).ready(function(){
+
+ $image_crop = $('#image_demo').croppie({
+	enableExif: true,
+	enableOrientation: true,
+    viewport: {
+      width:200,
+      height:200,
+	  type:'square' //circle
+    },
+    boundary:{
+      width:300,
+      height:300
+	}
+  });
+
+  $('#new_profile_image').on('change', function(){
+    var reader = new FileReader();
+    reader.onload = function (event) {
+      $image_crop.croppie('bind', {
+		url: event.target.result
+      }).then(function(){
+        console.log('jQuery bind complete');
+      });
+    }
+	reader.readAsDataURL(this.files[0]);
+	$("#image_crop").slideToggle("slow");
+	//$('#change_image').modal('hide');
+    //$('#uploadimageModal').modal('show');
+  });
+
+  $('.crop_image').click(function(event){
+    $image_crop.croppie('result', {
+      type: 'canvas',
+      size: 'viewport'
+    }).then(function(response){
+      $.ajax({
+        url:"ajaxProfilePicture.php",
+        type: "POST",
+        data:{"image": response},
+        success:function(data)
+        {
+		  $('#change_image').modal('hide');
+		  location.reload(true);
+          //$('#uploaded_image').html(data);
+        }
+      });
+    })
+  });
+  $( "#rotateLeft" ).click(function() {
+      $image_crop.croppie('rotate', parseInt($(this).data('rotate')));
+  });
+  
+  $( "#rotateRight" ).click(function() {
+      $image_crop.croppie('rotate',parseInt($(this).data('rotate')));
+  });
+
+});  
+</script>
+	<?php echo $_SESSION['js_modal_show']; ?>
+</body>
+
+</html>
+<?php
+
+	unset($_SESSION['modal']);
+unset($_SESSION['success_message']);
+	unset($_SESSION['error_message']);
+unset($_SESSION['info_message']);
+	unset($_SESSION['js_modal_show']);
+
+?>

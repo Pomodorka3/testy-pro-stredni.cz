@@ -1,0 +1,67 @@
+Searching 232 files for "htmlentities"
+
+C:\xampp\htdocs\testshop\faq_action.php:
+   13  
+   14  if (isset($_POST['title']) && isset($_POST['content'])) {
+   15: 	$title = trim($_POST['title']);
+   16: 	$content = trim($_POST['content']);
+   17  
+   18  	$insert_faq = sprintf("INSERT INTO faq (faq_title, faq_content, faq_created, faq_createdby) VALUES ('%s', '%s', '%s', '%d');",
+
+C:\xampp\htdocs\testshop\item_check_action.php:
+   50  	$decline_id = $_GET['decline_id'];
+   51  	$seller_id = $_GET['seller_id'];
+   52: 	$decline_reason = htmlentities(trim($_POST['decline_reason']));
+   53  
+   54  	$select = sprintf("SELECT item_name FROM shop WHERE item_id = '%d';",
+
+C:\xampp\htdocs\testshop\school_add_action.php:
+   42  } elseif (isset($_GET['decline_id']) && isset($_POST['decline_reason'])) {
+   43  	$decline_id = $_GET['decline_id'];
+   44: 	$decline_reason = htmlentities(trim($_POST['decline_reason']));
+   45  
+   46  	$select_school = sprintf("SELECT school_name, added_by FROM school WHERE school_id = '%d';",
+
+C:\xampp\htdocs\testshop\school_change.php:
+   14  
+   15  if (isset($_POST['school'])) {
+   16: 	$school_name = htmlentities(trim($_POST['school']));
+   17  
+   18  	$school_id = sprintf("SELECT school_id FROM school WHERE school_name = '%s';",
+
+C:\xampp\htdocs\testshop\school_check_action.php:
+   48  } elseif (isset($_GET['decline_id']) && isset($_POST['decline_reason'])) {
+   49  	$decline_id = $_GET['decline_id'];
+   50: 	$decline_reason = htmlentities(trim($_POST['decline_reason']));
+   51  
+   52  	$select_request = sprintf("SELECT sc.user_id, s.school_name FROM school_change sc, school s WHERE s.school_id = sc.change_school_id_to AND sc.id = '%d';",
+
+C:\xampp\htdocs\testshop\school_select.php:
+   23  
+   24  if (isset($_POST['school'])) {
+   25: 	$school_name = htmlentities(trim($_POST['school']));
+   26  
+   27  	$school_id = sprintf("SELECT school_id FROM school WHERE school_name = '%s';",
+
+C:\xampp\htdocs\testshop\ticket_show.php:
+  138  				$row['comment_created'],
+  139  				$delete_button,
+  140: 				htmlentities($row['comment_content']));
+  141  				}
+  142  				if ($select_ticket_row['ticket_answered'] == 0) {
+
+C:\xampp\htdocs\testshop\validators_apply.php:
+   13  if (isset($_POST['phone_number']) && isset($_POST['biography'])) {
+   14  	$phone_number = trim($_POST['phone_number']);
+   15: 	$biography = htmlentities(trim($_POST['biography']));
+   16  
+   17  	$already_validator = sprintf("SELECT user_id FROM users_groups WHERE user_id = '%d' AND group_id = 2;", mysqli_real_escape_string($connect, $user_id));
+
+C:\xampp\htdocs\testshop\validators_requests_action.php:
+   51  } elseif (isset($_GET['decline_id']) && isset($_POST['decline_reason'])) {
+   52  	$decline_id = $_GET['decline_id'];
+   53: 	$decline_reason = htmlentities(trim($_POST['decline_reason']));
+   54  
+   55  	$select_request = sprintf("SELECT request_from FROM validators_requests WHERE request_id = '%d';",
+
+10 matches across 9 files
